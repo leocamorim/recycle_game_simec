@@ -1,0 +1,367 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://scripts/Game.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Background.png" type="Texture" id=2]
+[ext_resource path="res://assets/Comfortaa-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scenes/Papelzinho.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/start-button.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Maquina.png" type="Texture" id=6]
+[ext_resource path="res://scenes/cans/can.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/red.png" type="Texture" id=8]
+[ext_resource path="res://assets/gray.png" type="Texture" id=9]
+[ext_resource path="res://Assets/yellow.png" type="Texture" id=10]
+[ext_resource path="res://assets/orange.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Esteira.png" type="Texture" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -3840, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Maquina:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( -0.1, 0 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Esteira:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( -0.1, 0 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("paper:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("plastic:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("common:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("metal:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("dangerous:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Maquina:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Esteira:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("paper:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("plastic:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("common:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("metal:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("dangerous:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="labelScore" type="Label" parent="."]
+margin_left = 3000.0
+margin_top = 80.0
+margin_right = 3630.0
+margin_bottom = 249.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.121569, 0.133333, 0.356863, 1 )
+text = "0 pts."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 421.935, 432.209 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="button" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+
+[node name="startButton" type="TouchScreenButton" parent="button"]
+position = Vector2( 2650, 250 )
+scale = Vector2( 0.485133, 0.485133 )
+normal = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="button"]
+anims/fadeIn = SubResource( 2 )
+anims/fadeOut = SubResource( 3 )
+
+[node name="Maquina" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 6 )
+centered = false
+
+[node name="paper" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 384, 1889 )
+type = "paper"
+
+[node name="plastic" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 1152, 1889 )
+type = "plastic"
+imagem = ExtResource( 8 )
+
+[node name="common" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 1920, 1889 )
+type = "common"
+imagem = ExtResource( 9 )
+
+[node name="metal" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 2688, 1889 )
+type = "metal"
+imagem = ExtResource( 10 )
+
+[node name="dangerous" parent="." instance=ExtResource( 7 )]
+visible = false
+position = Vector2( 3456, 1889 )
+type = "dangerous"
+imagem = ExtResource( 11 )
+
+[node name="Esteira" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+
+[node name="esteira1" type="Sprite" parent="Esteira"]
+texture = ExtResource( 12 )
+centered = false
+
+[node name="esteira2" type="Sprite" parent="Esteira"]
+editor/display_folded = true
+position = Vector2( 3840, 0 )
+texture = ExtResource( 12 )
+centered = false
+
+[node name="posItem1" type="Position2D" parent="Esteira/esteira2"]
+position = Vector2( 640, 1184.32 )
+
+[node name="posItem2" type="Position2D" parent="Esteira/esteira2"]
+position = Vector2( 1280, 1184.32 )
+
+[node name="posItem3" type="Position2D" parent="Esteira/esteira2"]
+position = Vector2( 1920, 1184.32 )
+
+[node name="posItem4" type="Position2D" parent="Esteira/esteira2"]
+position = Vector2( 2560, 1184.32 )
+
+[node name="posItem5" type="Position2D" parent="Esteira/esteira2"]
+position = Vector2( 3200, 1184.32 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Esteira"]
+anims/slideLeft = SubResource( 4 )
+
+[node name="animGeral" type="AnimationPlayer" parent="."]
+anims/fadeIn = SubResource( 5 )
+[connection signal="released" from="button/startButton" to="." method="_on_TouchScreenButton_released"]

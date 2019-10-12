@@ -1,1 +1,1 @@
-# recycle_game_simec
+# recycle-game

@@ -1,0 +1,323 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://scripts/EndGame.gd" type="Script" id=1]
+[ext_resource path="res://assets/Background.png" type="Texture" id=2]
+[ext_resource path="res://assets/Comfortaa-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/start-button.png" type="Texture" id=4]
+[ext_resource path="res://assets/bgWhite.png" type="Texture" id=5]
+[ext_resource path="res://assets/multidev.png" type="Texture" id=6]
+[ext_resource path="res://assets/Grupo_Simec_slogan.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 200
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "fadeIn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+size = 300
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "fadeIn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+size = 150
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "fadeIn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=7]
+size = 80
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "fadeIn"
+tracks/0/type = "value"
+tracks/0/path = NodePath("btRestart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("btRestart:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("MultiDev:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("MultiDev:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Empresa:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Empresa:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="EndGame" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 1920.0 ]
+}
+
+[node name="Background" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="congrats" type="Label" parent="."]
+editor/display_folded = true
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 1398.0
+margin_top = 115.0
+margin_right = 2442.0
+margin_bottom = 339.0
+rect_pivot_offset = Vector2( 522, 112 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.121569, 0.133333, 0.356863, 1 )
+text = "Parabéns!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="congrats"]
+anims/fadeIn = SubResource( 2 )
+
+[node name="labelScore" type="Label" parent="."]
+editor/display_folded = true
+visible = false
+margin_left = 1118.0
+margin_top = 590.0
+margin_right = 2714.0
+margin_bottom = 926.0
+rect_pivot_offset = Vector2( 798, 168 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.121569, 0.133333, 0.356863, 1 )
+text = "750 pts."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="labelScore"]
+anims/fadeIn = SubResource( 4 )
+
+[node name="message" type="Label" parent="."]
+editor/display_folded = true
+visible = false
+margin_left = 106.254
+margin_top = 1256.0
+margin_right = 3726.25
+margin_bottom = 1707.0
+rect_pivot_offset = Vector2( 1810, 225.5 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.121569, 0.133333, 0.356863, 1 )
+text = "A SIMEC agradece sua participação no SIPATMA 2019."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="message"]
+anims/fadeIn = SubResource( 6 )
+
+[node name="btRestart" type="TouchScreenButton" parent="."]
+visible = false
+position = Vector2( 3118.27, 100.458 )
+scale = Vector2( 0.505908, 0.505908 )
+normal = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 3143.39
+margin_top = 434.121
+margin_right = 3419.39
+margin_bottom = 524.121
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.121569, 0.133333, 0.356863, 1 )
+text = "Replay"
+align = 1
+valign = 1
+
+[node name="MultiDev" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+
+[node name="bgWhite" type="Sprite" parent="MultiDev"]
+position = Vector2( 432.501, 1918.81 )
+scale = Vector2( 0.4, 0.32 )
+texture = ExtResource( 5 )
+
+[node name="multidev" type="Sprite" parent="MultiDev"]
+position = Vector2( 432.501, 1918.81 )
+scale = Vector2( 0.536727, 0.536727 )
+texture = ExtResource( 6 )
+
+[node name="Empresa" type="Node2D" parent="."]
+editor/display_folded = true
+visible = false
+
+[node name="bgWhite" type="Sprite" parent="Empresa"]
+position = Vector2( 3400.38, 1940.67 )
+scale = Vector2( 0.401691, 0.321692 )
+texture = ExtResource( 5 )
+
+[node name="logo_empresa" type="Sprite" parent="Empresa"]
+position = Vector2( 3400.38, 1940.67 )
+scale = Vector2( 0.822177, 0.822177 )
+texture = ExtResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fadeIn = SubResource( 8 )
+[connection signal="released" from="btRestart" to="." method="_on_btRestart_released"]

@@ -1,0 +1,12 @@
+{
+    "addPts": 50,
+    "subPts": 10,
+    "ptsPremios": {
+        "0": 0
+    },
+    "premios": {
+        "0": "A SIMEC agradece sua participação no SIPATMA 2019."
+    },
+    "preTxtPremio": "",
+    "txtSemPremio": "A SIMEC agradece sua participação no SIPATMA 2019."
+}
